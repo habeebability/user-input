@@ -3,15 +3,17 @@ const addBtn = document.querySelector('#add-btn');
 const container = document.querySelector('#container');
 const showOdd = document.querySelector('#show-odd');
 const showEven = document.querySelector('#show-even');
-const countersField = document.querySelector('#counters');
+const countersEven = document.querySelector('#counters-even');
+const countersOdd = document.querySelector('#counters-odd');
+
 
 const numbers = [];
 
 showEven.addEventListener('click', function(){
-  countersField.innerHTML = countEven(numbers);
+  countersEven.innerHTML = `${countEven(numbers)} Even Number(s)`;
 });
 showOdd.addEventListener('click', function(){
-
+  countersOdd.innerHTML = `${countOdd(numbers)} Odd Number(s)`;
 });
 
 //filter
@@ -34,11 +36,20 @@ showOdd.addEventListener('click', function(){
 // }
 
 //for Each
-
 function countEven(numbers) {
   let count = 0;
   numbers.forEach((number) => {
     if(number % 2 === 0 && number !== null) {
+      count++;
+    }
+  })
+  return count;
+}
+
+function countOdd(numbers) {
+  let count = 0;
+  numbers.forEach((number) => {
+    if(number % 2 === 1 && number !== null) {
       count++;
     }
   })
