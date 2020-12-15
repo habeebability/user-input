@@ -9,12 +9,7 @@ const countersOdd = document.querySelector('#counters-odd');
 
 const numbers = [];
 
-showEven.addEventListener('click', function(){
-  countersEven.innerHTML = `${countEven(numbers)} Even Number(s)`;
-});
-showOdd.addEventListener('click', function(){
-  countersOdd.innerHTML = `${countOdd(numbers)} Odd Number(s)`;
-});
+
 
 //filter
 // function countEven(numbers){
@@ -57,10 +52,11 @@ function countOdd(numbers) {
 }
 
   function addNum () {
-
+    
     userInput.value = Number(userInput.value);
+    
     numbers.push(userInput.value);
-
+    
     const item = document.createElement('h2');
   
     container.appendChild(item);
@@ -73,8 +69,17 @@ function countOdd(numbers) {
       console.log(numbers);
       item.remove();
     })
-    
+  
     userInput.value = '';
-
+   
+    showEven.addEventListener('click', function(){
+      countersEven.innerHTML = `${countEven(numbers)} Even Number(s)`;
+    });
+    
+    showOdd.addEventListener('click', function(){
+      countersOdd.innerHTML = `${countOdd(numbers)} Odd Number(s)`;
+    });
   }
-addBtn.addEventListener('click', addNum)
+  
+  addBtn.addEventListener('click', addNum)
+  

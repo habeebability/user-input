@@ -1,9 +1,37 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3dd410;
+  height: 10vh;
+}
+#container{
+  background-color: rgb(209, 12, 209);
+  margin: 5rem auto;
+  min-width: 20vw;
+  min-height: 40vh;
+}
+.buts {
+  display: flex;
+  flex-direction: column;
+}
+
 .yellow-box {
+  background-color: rgb(20, 202, 44);
   text-align: center;
   width: 50px;
   cursor: pointer;
+  margin-bottom: 5px;
 }
-
+h1 {
+  color: white;
+  text-align: center;
+}
 .del-btn {
   padding: 2px 40px;
   background-color: red;
@@ -14,4 +42,33 @@
 }
 .show {
   display: block;
+}
+
+#user-input {
+  height: 2rem;
+  min-width: 12vw;
+  padding: 10px 20px;
+}
+#counters-odd{
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+}
+#counters-even{
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+}
+.btn {
+  padding: 5px 20px;
+  transition: top .01s linear;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+@media only screen and (max-width: 600px) {
+  container {
+    width: 50vw;
+  }
+  nav{
+    max-width: 100%;
+  }
 }

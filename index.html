@@ -8,15 +8,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <label for="user-input">Enter Number</label> <input type="text" id="user-input" name="user-input">
-  <button id="add-btn">Add Number</button>
-  <div id="container">
-    <button id="show-odd">Show Odd</button>
-    <button id="show-even">Show Even</button>
-    <p id="counters-even"></p>
-    <p id="counters-odd"></p>
+  <nav>
+    <h1>Odd or Even Number Checker</h1>
+  </nav>
 
+  <div id="container">
+    <input type="text" id="user-input" name="user-input" placeholder="Enter Number">
+    <button id="add-btn" class="btn">Add Number</button>
     
+    <button id="show-odd" class="btn">Show Odd</button> <p id="counters-odd"></p>
+    <button id="show-even" class="btn">Show Even</button> <p id="counters-even"></p>
+   
+   
+   
   </div>
   
   <script src="app.js"></script>
